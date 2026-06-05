@@ -1,6 +1,7 @@
 {
   "build": {
-    "builder": "nixpacks"
+    "builder": "nixpacks",
+    "buildCommand": "composer install --no-scripts --no-interaction --prefer-dist && php artisan optimize"
   },
   "deploy": {
     "startCommand": "vendor/bin/heroku-php-apache2 public/",

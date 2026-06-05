@@ -1,0 +1,9 @@
+[build]
+cmds = [
+  "composer install --no-scripts --no-interaction --prefer-dist",
+  "php -d memory_limit=-1 artisan optimize --no-interaction || true",
+  "php -d memory_limit=-1 artisan config:cache --no-interaction || true"
+]
+
+[start]
+cmd = "vendor/bin/heroku-php-apache2 public/"
