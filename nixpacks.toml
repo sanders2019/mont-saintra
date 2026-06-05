@@ -1,3 +1,5 @@
+providers = ["php"]
+
 [install]
 cmds = [
   "mkdir -p /var/log/nginx /var/run/nginx",
